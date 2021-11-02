@@ -1,0 +1,118 @@
+/*
+
+This is a demo of the library Vara.js
+https://github.com/akzhy/Vara
+http://vara.akzhy.com
+
+The content used here is a part from Harry Potter and the Chamber of Secrets, when Harry writes on Rom Riddle's diary.
+
+*/
+
+* {
+  font-family: 'DotGothic16', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+/*BOTAO PARA PASSAR PARA A PROXIMA TELA*/
+
+.button {
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  font-size: 3em;
+  border: transparent;
+  margin-right: 2em;
+}
+
+
+/* DIV LINHA ONDE FOI COLOCADO O TEXTO*/
+
+.line {
+  border-right: 2px solid rgb(255, 255, 255);
+  color: white;
+  font-size: 3em;
+  margin: 0 auto;
+  text-align: center;
+  /*ele não quebra as palavras*/
+  white-space: nowrap;
+  /*esconde as plavras conforme o tamanho da linha*/
+  overflow: hidden;
+}
+
+
+/* FAZENDO AS ANIMAÇÕES*/
+
+
+/*ANIMAÇÃO DO CURSOR FICAR PISCANDO*/
+
+@keyframes blinkCursor {
+  from {
+    border-right-color: rgb(255, 255, 255);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+
+/*ANIMAÇÃO DE DIGITAÇÃO DE CADA ELEMENTO*/
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 14em;
+  }
+}
+
+@keyframes typing2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 27em;
+  }
+}
+
+@keyframes typing3 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 34em;
+  }
+}
+
+@keyframes typing4 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 16em;
+  }
+}
+
+
+/* CURSOR */
+
+
+/* @keyframes name | duration | timing-function | delay */
+
+.typing-animation {
+  animation: blinkCursor 800ms steps(40) infinite normal, typing 3s steps(40) 500ms normal both;
+}
+
+
+/*STEPS = quebra a animação em quadros passados*/
