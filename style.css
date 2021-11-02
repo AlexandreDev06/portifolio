@@ -32,7 +32,9 @@ body {
   text-decoration: none;
   font-size: 3em;
   border: transparent;
-  margin-right: 2em;
+  position: absolute;
+  right: 20px;
+  top: 50%;
 }
 
 
