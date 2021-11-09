@@ -1,5 +1,7 @@
 var text = document.getElementById("text");
 var button = document.getElementById("button")
+var myfinances = document.getElementById("myfinances")
+var final = document.getElementById("final")
 var num = 0;
 
 
@@ -15,12 +17,13 @@ function next() {
     text.style.animation = "blinkCursor 800ms steps(40) infinite normal, typing4 4s steps(40) 500ms normal both";
     text.innerHTML = "Posso te apresentar meu projeto?";
   } else if (num == 4) {
-    text.className = "animate__animated animate__fadeIn animate__slow";
-    text.style = '';
-    text.innerHTML = "<p style='color: white;'>Esse é meu projeto chamado My Finances</p> <br><img src='myfinances.png' height='700' width='1200' border='1px'>";
+    text.style.display = "none";
+    myfinances.style.display = 'block';
+  } else if (num == 5) {
+    myfinances.style.display = 'none';
+    final.style.display = 'block';
+  } else if (num == 6) {
+    location.reload();
   }
-  if (num > 4 || num <= 0) {
-    text.innerHTML = "Olá meu nome é Alexandre =)";
-    num = 0;
-  }
+
 }
